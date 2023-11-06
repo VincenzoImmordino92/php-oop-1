@@ -1,10 +1,12 @@
 <?php
 
 class Image{
+  public $percorsoImmagine;
   public $nomeImmagine;
   public $type = 'image';
 
-  public function __costruct($_nomeImmagine){
+  public function __costruct($_percorsoImmagine,$_nomeImmagine){
+    $this->percorsoImmagine = $_percorsoImmagine;
     $this->nomeImmagine = $_nomeImmagine;
   }
 }
