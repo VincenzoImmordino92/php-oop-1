@@ -1,5 +1,9 @@
 <?php
 
+require_once __DIR__ . "/Model/Movie.php";
+require_once __DIR__ . "/Model/Image.php";
+require_once __DIR__ . "/db/db.php";
+
 
 ?>
 
