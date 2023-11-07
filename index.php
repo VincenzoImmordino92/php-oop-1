@@ -1,10 +1,12 @@
 <?php
 
-require_once __DIR__ . "/models/Movie.php";
+require_once __DIR__ . "/models/Production.php";
 require_once __DIR__ . "/models/Image.php";
+require_once __DIR__ . "/models/Movie.php";
+require_once __DIR__ . "/models/TvSerie.php";
 require_once __DIR__ . "/db/db.php";
 
-var_dump($movies);
+var_dump($productions);
 
 ?>
 

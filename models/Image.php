@@ -5,7 +5,7 @@ class Image{
   public $nomeImmagine;
   public $type = 'image';
 
-  public function __costruct($_percorsoImmagine,$_nomeImmagine){
+  public function __construct($_percorsoImmagine,$_nomeImmagine){
     $this->percorsoImmagine = $_percorsoImmagine;
     $this->nomeImmagine = $_nomeImmagine;
   }
