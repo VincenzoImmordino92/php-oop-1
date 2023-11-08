@@ -1,7 +1,7 @@
 <?php 
 
 $productions = [
-  new Movie('Blue Beetle','The Safran Company',['Azione','Avventura','Fantascienza','Film Di Supereroi','Thriller'],'DC Studios',
+  new Movie('Blue Beetle','The Safran Company',['Azione','Avventura','Fantascienza','Animazione'],'DC Studios',
   new Image('Blue Beetle.jpg','blue beetle'),127,['Xolo Mariduena','Bruna Marquezine','George Lopez'],'2023'),
   
   new TvSerie('Game of Thrones','HBO Entertainment',['fantastico', 'drammatico', 'azione'],'La Compagnia Dorata', 

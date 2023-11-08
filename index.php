@@ -1,11 +1,15 @@
 <?php
+try{
+  require_once __DIR__ . "/models/Production.php";
+  require_once __DIR__ . "/traits/PublisherYear.php";
+  require_once __DIR__ . "/models/Image.php";
+  require_once __DIR__ . "/models/Movie.php";
+  require_once __DIR__ . "/models/TvSerie.php";
+  require_once __DIR__ . "/db/db.php";
+} catch(Exception $e){
+  $error = $e->getMessage();
+}
 
-require_once __DIR__ . "/models/Production.php";
-require_once __DIR__ . "/traits/PublisherYear.php";
-require_once __DIR__ . "/models/Image.php";
-require_once __DIR__ . "/models/Movie.php";
-require_once __DIR__ . "/models/TvSerie.php";
-require_once __DIR__ . "/db/db.php";
 
 ?>
 
@@ -26,8 +30,16 @@ require_once __DIR__ . "/db/db.php";
 <body>
   <h1 class="text-center my-5">Films & SeriesTV</h1>
   <div class="container my-5">
-    <div class="row">
+    
+    <?php if(isset($error)): ?>
+      <div class="alert alert-danger" role="alert">
+        <?php echo $error ?>
+      </div>
 
+    <?php else: ?>
+
+    <div class="row">
+  
       <?php foreach($productions as $production): ?>
         <div class="col-auto p-3">
           <div class="card h-100 m-auto" style="width: 18rem;">
@@ -53,6 +65,7 @@ require_once __DIR__ . "/db/db.php";
           </div>
         </div>
       <?php endforeach; ?>
+      <?php endif; ?>
     </div>
   </div>
   
