@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/models/Production.php";
+require_once __DIR__ . "/traits/PublisherYear.php";
 require_once __DIR__ . "/models/Image.php";
 require_once __DIR__ . "/models/Movie.php";
 require_once __DIR__ . "/models/TvSerie.php";
@@ -39,6 +40,9 @@ require_once __DIR__ . "/db/db.php";
               <?php if(isset($production->cast) && (get_class($production) == 'Movie')): ?>
                 <p class="card-text"><h6>Cast: <?php echo implode('-',$production->cast)?></h6></p>
                 <p class="card-text"><h6>Durata Film: <?php echo $production->running_time ?></h6></p>
+                <p class="card-text"><h6>Anno di Pubblicazione: <?php echo $production->getPublisherYear() ?></h6></p>
+                
+                
               <?php else: ?>
                 <p class="card-text"><h6>Anno di produzione: <?php echo $production->aired_from_year ?></h6></p>
                 <p class="card-text"><h6>Anno di fine produzine: <?php echo $production->aired_to_year ?></h6></p>

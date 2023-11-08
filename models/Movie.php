@@ -1,10 +1,11 @@
 <?php
 class Movie extends Production{
-  public $publisher_year;
+  
+  use PublisherYear;
   public $running_time;
   public $cast;
 
-  public function __construct(string $_name,string $_name_production, array $_genre, string $_film_company, Image $_coverImage,string $_publisher_year,int $_running_time,array $_cast){
+  public function __construct(string $_name,string $_name_production, array $_genre, string $_film_company, Image $_coverImage,int $_running_time,array $_cast, string $_publisher_year){
 
     parent::__construct($_name, $_name_production, $_genre,  $_film_company, $_coverImage);
 
@@ -12,6 +13,7 @@ class Movie extends Production{
     $this->running_time = $_running_time;
     $this->cast = $_cast;
   }
+
 
   public function addActor($actorName){
     $this->cast[] = $actorName;
